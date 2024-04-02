@@ -9,6 +9,11 @@ body {
   font-family: "Poppins", sans-serif;
   overflow: hidden;
 }
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
 section {
   position: relative;
   height: 100vh;
@@ -47,22 +52,21 @@ section .profile .profile-img {
   font-weight: 400;
   margin-top: -6px;
 }
-.profile .button {
+.profile .open-btn {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 12px 24px;
-  background: #4070f4;
+  background-color: #4070f4;
   margin-top: 20px;
   border-radius: 6px;
-  cursor: pointer;
   font-size: 24px;
   transition: all 0.3s ease;
 }
-.profile .button:hover {
-  background: #275df1;
+.profile .open-btn:hover {
+  background-color: #275df1;
 }
-.profile .button i {
+.profile .open-btn i {
   display: grid;
   place-items: center;
 }
@@ -70,59 +74,37 @@ section .profile .profile-img {
   width: 22px;
   height: 22px;
 }
-.profile .button button {
-  background: none;
-  outline: none;
-  border: none;
+.profile .open-btn {
   font-size: 20px;
   color: #fff;
-  pointer-events: none;
 }
 
-section .popup-outer {
+section .popup-box {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
   opacity: 0;
-  pointer-events: none;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   transform: scale(1.2);
   transition: all 0.3s ease-in-out;
+  visibility: hidden;
 }
-section.show .popup-outer {
+section.show .popup-box {
   opacity: 1;
-  pointer-events: auto;
+  visibility: visible;
   transform: scale(1);
 }
 section .popup-box {
-  position: relative;
+  position: absolute;
   padding: 30px;
   max-width: 420px;
   width: 100%;
-  background: #fff;
+  background-color: #fff;
   border-radius: 12px;
-}
-.popup-box .close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  font-size: 30px;
-  color: #b4b4b4;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.popup-box .close:hover {
-  color: #333;
 }
 section .popup-box .profile-text {
   display: flex;
   align-items: center;
 }
-section .popup-box img:not(.icon) {
+section .popup-box img {
   height: 70px;
   width: 70px;
   object-fit: cover;
@@ -134,11 +116,11 @@ section .popup-box img:not(.icon) {
   margin-left: 15px;
 }
 .profile-text .text .name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
 }
 .profile-text .text .profession {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
 }
 section .popup-box textarea {
@@ -154,42 +136,46 @@ section .popup-box textarea {
   font-weight: 400;
   background: #f3f3f3;
 }
-section .popup-box .button {
+section .popup-box .group-btn {
   display: flex;
   justify-content: flex-end;
   margin-top: 15px;
 }
-.popup-box .button button {
-  outline: none;
-  border: none;
+.popup-box .group-btn button {
   padding: 8px 14px;
   border-radius: 6px;
-  background: #6f93f6;
+  background-color: #6f93f6;
   margin-left: 12px;
   color: #fff;
   font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.button button.cancel {
-  background: #f082ac;
+.popup-box .group-btn button.cancel-btn {
+  background-color: #f082ac;
 }
-.button button.cancel:hover {
+.popup-box .group-btn button.cancel-btn:hover {
   background: #ec5f95;
 }
-.button button.send:is(:hover, .active) {
+.popup-box .group-btn button.send-btn:is(:hover, .active) {
   background: #275df1;
 }
 
 .popup-box .header {
   display: flex;
   justify-content: space-around;
-  align-content: center;
+  align-items: center;
 }
-.header i {
+.header .close-btn {
   display: grid;
   place-items: center;
-  cursor: pointer;
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+}
+.header .close-icon {
+  width: inherit;
+  height: inherit;
 }
 
 @media (max-width: 510px) {

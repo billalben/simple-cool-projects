@@ -12,20 +12,17 @@
     <section>
       <div class="profile">
         <div class="profile-img">
-          <img src="profile.jpeg" alt="" />
+          <img src="profile.jpeg" alt="person" />
         </div>
         <span class="name">Billal Benzazoua</span>
         <span class="profession">Front-End Developer</span>
-        <div id="hireBtn" class="button">
-          <i>
-            <img src="./envelope-icon.svg" class="icon" alt="icon" />
-          </i>
-          <button>Hire me</button>
-        </div>
+        <button class="open-btn" data-hire-btn>
+          <img src="./envelope-icon.svg" class="icon" alt="icon" />
+          Hire me
+        </button>
       </div>
 
       <!-- popup box start -->
-      <div class="popup-outer">
         <div class="popup-box">
           <div class="header">
             <div class="profile-text">
@@ -35,27 +32,28 @@
                 <span class="profession">Front-End Developer</span>
               </div>
             </div>
-            <i>
+
+            <button class="close-btn" data-close>
               <img
-                src="./close-icon.svg"
-                id="close"
-                class="icon"
-                alt="close icon"
-              />
-            </i>
+              src="./close-icon.svg"
+              id="close"
+              class="close-icon"
+              alt="close icon"
+            />
+            </button>
           </div>
+
           <form>
             <textarea
               spellcheck="false"
               placeholder="Enter your message"
             ></textarea>
-            <div class="button">
-              <button id="close" class="cancel">Cancel</button>
-              <button class="send">Send</button>
+            <div class="group-btn" data-send>
+              <button class="cancel-btn" data-close>Cancel</button>
+              <button class="send-btn" data-submit>Send</button>
             </div>
           </form>
         </div>
-      </div>
     </section>
 
     <script src="script.js"></script>
