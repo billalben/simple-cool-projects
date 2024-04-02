@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Popup Modal Box</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./envelope-icon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <section>
+      <div class="profile">
+        <div class="profile-img">
+          <img src="profile.jpeg" alt="" />
+        </div>
+        <span class="name">Billal Benzazoua</span>
+        <span class="profession">Front-End Developer</span>
+        <div id="hireBtn" class="button">
+          <i>
+            <img src="./envelope-icon.svg" class="icon" alt="icon" />
+          </i>
+          <button>Hire me</button>
+        </div>
+      </div>
+
+      <!-- popup box start -->
+      <div class="popup-outer">
+        <div class="popup-box">
+          <div class="header">
+            <div class="profile-text">
+              <img src="profile.jpeg" alt="" />
+              <div class="text">
+                <span class="name">Billal Benzazoua</span>
+                <span class="profession">Front-End Developer</span>
+              </div>
+            </div>
+            <i>
+              <img
+                src="./close-icon.svg"
+                id="close"
+                class="icon"
+                alt="close icon"
+              />
+            </i>
+          </div>
+          <form>
+            <textarea
+              spellcheck="false"
+              placeholder="Enter your message"
+            ></textarea>
+            <div class="button">
+              <button id="close" class="cancel">Cancel</button>
+              <button class="send">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
