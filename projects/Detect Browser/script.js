@@ -23,6 +23,4 @@ switch (true) {
 }
 
 const logo = document.querySelector(`.logos .${browser}`);
-if (logo) {
-  logo.style.opacity = "1";
-}
+if (logo) logo.style.opacity = "1";
