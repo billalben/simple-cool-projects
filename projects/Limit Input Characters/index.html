@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Limit Input Characters</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./at-sign.svg" type="image/svg+xml">
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="#">
+        <input
+          type="text"
+          spellcheck="false"
+          placeholder="username"
+          maxlength="19"
+          required
+        />
+        <!-- <i class="uis uis-at"></i> -->
+        <img src="at-sign.svg" alt="">
+        <span class="counter">19</span>
+      </form>
+    </div>
+
+    <script>
+      const input = document.querySelector("form input");
+      const counter = document.querySelector("form .counter");
+      const maxLength = input.getAttribute("maxlength");
+
+      function updateCounter() {
+        counter.innerText = maxLength - input.value.length;
+        input.value.length == maxLength ? counter.style.color = "red" : counter.style.color = "black";
+      }
+
+      input.addEventListener("input", updateCounter);
+
+      // Update counter on page load
+      updateCounter();
+    </script>
+  </body>
+</html>
