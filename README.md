@@ -2,4 +2,4 @@
 
 Welcome to a collection of simple cool projects built using HTML, CSS, and JavaScript.
 
-[View Live Demo](https://billalben.github.io/)
+[View Live Demo](https://billalben.github.io/simple-cool-projects/)
