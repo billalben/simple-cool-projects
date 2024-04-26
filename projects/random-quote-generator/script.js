@@ -10,7 +10,7 @@ async function fetchQuote() {
   quoteBtn.classList.add("loading");
   quoteBtn.innerText = "Loading Quote...";
   try {
-    const response = await fetch("http://api.quotable.io/random");
+    const response = await fetch("https://api.quotable.io/random");
     const result = await response.json();
     quoteText.innerText = result.content;
     authorName.innerText = result.author;
